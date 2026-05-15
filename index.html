@@ -593,16 +593,15 @@ footer{background:var(--navy);padding:2.5rem 6%;display:flex;justify-content:spa
     </div>
     <form class="contact-form reveal reveal-delay-3" action="https://formspree.io/f/xykoonyv" method="POST">
       <input type="hidden" name="_subject" value="New Portfolio Contact Message"/>
-      <input type="hidden" name="_replyto" value="godfredansahnanayaw@gmail.com"/>
       <input type="text" name="_gotcha" style="display:none"/>
       <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required/></div>
-        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required/></div>
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John" required/></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Doe" required/></div>
       </div>
-      <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com" required/></div>
+      <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="john@example.com" required/></div>
       <div class="form-group">
         <label>Subject</label>
-        <select>
+        <select name="subject">
           <option>Job Opportunity</option>
           <option>Internship</option>
           <option>Production Project</option>
@@ -610,7 +609,7 @@ footer{background:var(--navy);padding:2.5rem 6%;display:flex;justify-content:spa
           <option>General Enquiry</option>
         </select>
       </div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the opportunity or how I can help..."></textarea></div>
+      <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me about the opportunity or how I can help..."></textarea></div>
       <button type="submit" class="btn-submit">Send Message →</button>
       <div id="form-success" style="display:none;color:#1a7a4a;font-size:0.88rem;font-weight:600;padding:0.5rem 0;">✅ Message sent! I'll get back to you soon.</div>
     </form>
